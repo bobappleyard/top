@@ -1,7 +1,6 @@
 package top
 
 import (
-	"github.com/y0ssar1an/q"
 	"reflect"
 	"testing"
 )
@@ -66,7 +65,6 @@ func TestGraph(t *testing.T) {
 			for _, p := range test.pairs {
 				g.Link(p.from, p.to)
 			}
-			q.Q(g)
 			out, err := g.Sort()
 			if err != test.err {
 				t.Errorf("unexpected error, expected %v, got %v", test.err, err)
